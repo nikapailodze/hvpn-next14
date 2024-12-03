@@ -9,6 +9,7 @@ import Header from '../Components/Header/Header';
 import Status from '../Components/Status/Status';
 import { usePathname } from 'next/navigation';
 import RecentConnection from '../Components/AsideMenu/Components/RecentConnection/RecentConnection';
+import IPDisplay from '../Components/AsideMenu/Components/IPDisplay/IPDisplay';
 
 interface Props {
     children?: ReactNode;
@@ -26,10 +27,12 @@ const Wrapper = ({ children }: Props) => {
     return (
         <RecoilRoot>
             <div className={styles.container}>
-                {/* <AsideMenu /> */}
+                <Header />
                 <div className={styles.content}>
-                    <Header />
+                    
                     {/* {displayPath && <Status />} */}
+                    <IPDisplay isLocationSelected={isLocationSelected} />
+
                     {children}
 
 
