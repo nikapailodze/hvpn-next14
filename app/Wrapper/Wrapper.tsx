@@ -26,10 +26,10 @@ const Wrapper = ({ children }: Props) => {
     return (
         <RecoilRoot>
             <div className={styles.container}>
-                <AsideMenu />
+                {/* <AsideMenu /> */}
                 <div className={styles.content}>
                     <Header />
-                    {displayPath && <Status />}
+                    {/* {displayPath && <Status />} */}
                     {children}
 
 

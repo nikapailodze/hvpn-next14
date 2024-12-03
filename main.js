@@ -11,7 +11,7 @@ app.commandLine.appendSwitch('disable-features', 'OutOfBlinkCors');
 nextApp.prepare().then(() => {
   function createWindow() {
     const mainWindow = new BrowserWindow({
-      width: 1016,
+      width: 463,
       height: 812,
       title: "H-VPN",
       webPreferences: {

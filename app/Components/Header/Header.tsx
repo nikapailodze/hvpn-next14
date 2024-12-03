@@ -16,29 +16,31 @@ const Header = () => {
     };
     return (
         <header className={styles.container}>
-            <div className={styles.contnet}>
-                <div className={styles.profilePic}>
-                    <Image src={'/bing.png'} width={40} height={40} alt='profile picture' />
-                </div>
-                <p className={styles.title}>Wade Warren</p>
-                <div
-                    onClick={onDropdownClick}
-                    className={`${styles.dropDown} ${showOptions ? styles.open : ""}`}
-                >
-                    <Image src={IconEnum.DropDown} width={24} height={24} alt='Drop Down' />
-                </div>
-
+            <div className={styles.pro}>
+                <Image src={IconEnum.DollarSymbol} width={20} height={20} alt='Dollar Sybmbol'/>
+                <p>Pro</p>
+ 
             </div>
+
+            <Status />
+
             <div
-            className={`${styles.locationsContainer} 
-            ${showOptions ? styles.locationsContainerShow 
-                : styles.locationsContainerHide
+                onClick={onDropdownClick}
+                className={`${styles.dropDown} ${showOptions ? styles.open : ""}`}
+            >
+                <Image src={IconEnum.Settings} width={24} height={24} alt='Drop Down' />
+            </div>
+
+            <div
+                className={`${styles.locationsContainer} 
+            ${showOptions ? styles.locationsContainerShow
+                        : styles.locationsContainerHide
                     }`}
             >
-                <DropOptionList />  
+                <DropOptionList />
 
             </div>
-            <div onClick={onClickOverlay} className={`${styles.overlay} ${ showOptions && styles.showOverlay}`}></div>
+            <div onClick={onClickOverlay} className={`${styles.overlay} ${showOptions && styles.showOverlay}`}></div>
 
         </header>
     )

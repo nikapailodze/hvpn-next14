@@ -24,6 +24,8 @@ export enum IconEnum {
 
     Premium = 'Icons/premiumIocn.svg',
 
-    Play= 'Icons/play.svg'
+    Play= 'Icons/play.svg',
+
+    DollarSymbol='Icons/dollarSymbol.svg',
     
 }
