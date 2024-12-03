@@ -23,7 +23,7 @@ const RecentConnection = (props: Props) => {
     return (
         <div>
             <div className={styles.container}>
-                <p className={styles.title}>Recent Connection</p>
+                
                 <div className={styles.mainContent}>
                     <div
                         className={`${props.isLocationSelected && styles.selectedContent} ${styles.content} ${
