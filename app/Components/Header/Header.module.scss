@@ -1,10 +1,10 @@
 .container {
     display: flex;
     padding: 16px 24px 16px 0px;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: #17181D;
+    // background: #17181D;
     height: 72px;
     position: relative;
 }
@@ -33,6 +33,13 @@
 
 .dropDown {
     transition: transform 0.3s ease;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #292A33;
+    border-radius: 8px;
 }
 
 .open {
@@ -100,4 +107,24 @@
 .showOverlay {
     display: block;
     position: fixed;
+}
+
+
+.pro {
+    display: flex;
+    gap :8px;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 8px 12px;
+    border-radius: 0px 20px 20px 0px;
+
+
+    background-color: #FFCD19;
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }

@@ -9,7 +9,7 @@ const Status = () => {
 
     return (
         <div className={styles.container}>
-            <p className={`${styles.subtext}`}>your status is</p>
+            <p className={`${styles.subtext}`}>your status is:</p>
             <p className={`${styles.title} ${isLocationSelected && styles.subtextActive} `}>{isLocationSelected ? 'Protected' : 'Unprotected'}</p>
         </div>
 
