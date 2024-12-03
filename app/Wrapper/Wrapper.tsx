@@ -27,17 +27,24 @@ const Wrapper = ({ children }: Props) => {
     return (
         <RecoilRoot>
             <div className={styles.container}>
-                <Header />
+                {displayPath &&
+                    <Header />
+                }
+
                 <div className={styles.content}>
-                    
+
                     {/* {displayPath && <Status />} */}
-                    <IPDisplay isLocationSelected={isLocationSelected} />
+                    {displayPath &&
+                        <IPDisplay isLocationSelected={isLocationSelected} />
+                    }
 
                     {children}
 
+                    {displayPath &&
+                        <RecentConnection isLocationSelected={isLocationSelected} country="USA" locations="Locations 4"
+                            countryFlag="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" />
+                    }
 
-                    <RecentConnection isLocationSelected={isLocationSelected} country="USA" locations="Locations 4"
-                        countryFlag="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" />
 
 
                 </div>
