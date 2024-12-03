@@ -1,8 +1,8 @@
 .conatiner {
     display: flex;
-    width: 148.213px;
-    height: 148.213px;
-    padding: 19.907px 20.012px 19.905px 19.801px;
+    width: 94.155px;
+    height: 94.155px;
+    padding: 12.646px 12.712px 12.645px 12.58px;
     justify-content: center;
     align-items: center;
     
@@ -10,12 +10,12 @@
     
     
     background-color: #0D0E0F;
-    border-radius: 78.837px;
+    border-radius: 50px;
 }
 
 
 .pulse {
-    animation: pulse-animation 2s infinite;
+    animation: pulse-animation 1.5s infinite;
 }
 @keyframes pulse-animation {
     0% {

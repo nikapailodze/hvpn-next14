@@ -6,10 +6,10 @@ import { RecoilRoot } from 'recoil';
 import styles from './Wrapper.module.scss'
 import AsideMenu from '../Components/AsideMenu/AsideMenu';
 import Header from '../Components/Header/Header';
-import Status from '../Components/Status/Status';
+import Status from '../Components/Header/Status/Status';
 import { usePathname } from 'next/navigation';
-import RecentConnection from '../Components/AsideMenu/Components/RecentConnection/RecentConnection';
-import IPDisplay from '../Components/AsideMenu/Components/IPDisplay/IPDisplay';
+import RecentConnection from '../Components/RecentConnection/RecentConnection';
+import IPDisplay from '../Components/IPDisplay/IPDisplay';
 
 interface Props {
     children?: ReactNode;

@@ -3,9 +3,9 @@ import Image from "next/image";
 import { IconEnum } from "@/global/Icon.enum";
 
 //Components
-import IPDisplay from "./Components/IPDisplay/IPDisplay";
+import IPDisplay from "../IPDisplay/IPDisplay";
 import Button from "../Button/Button";
-import RecentConnection from "./Components/RecentConnection/RecentConnection";
+import RecentConnection from "../RecentConnection/RecentConnection";
 import SearchComponent from "./Components/SearchComponent/SearchComponent";
 
 import { useState } from "react";

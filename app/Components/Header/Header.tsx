@@ -3,7 +3,7 @@ import styles from './Header.module.scss'
 import Image from 'next/image'
 import { useState } from 'react';
 import DropOptionList from './Components/DropOptionList/DropOptionList';
-import Status from '../Status/Status';
+import Status from './Status/Status';
 
 const Header = () => {
     const [showOptions, setShowOptions] = useState(false);
