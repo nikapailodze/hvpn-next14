@@ -1,0 +1,33 @@
+@import "../../../global/colors.scss";
+
+.container {
+    max-width: 320px;
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 8px;
+    padding: 8px 16px;
+    height: 40px;
+    
+}
+
+.filleButton {
+    background: $primary-Button;
+    color: $primary-text-color;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+}
+
+.outlinedButton {
+    border: 1px solid $primary-Button;
+    background: transparent;
+    color: $primary-Button;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

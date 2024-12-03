@@ -1,0 +1,21 @@
+@import '../../../../../global/colors.scss';
+
+.container {
+    width: 100%;
+    padding: 8px 12px 8px 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: $secondary-gray-text-color;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    border: 1px solid transparent;
+
+}
+
+.container:active {
+    border: 1px solid #6F3CEB;
+    color: $primary-Button;
+}

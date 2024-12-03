@@ -1,0 +1,6 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group">
+<path id="Path" fill-rule="evenodd" clip-rule="evenodd" d="M13.5861 7.80059L12.1758 8.08319L10.5904 6.49465C10.4341 6.33802 10.2219 6.25 10.0006 6.25C9.77928 6.25 9.56708 6.33802 9.41075 6.49465L7.82531 8.08319L6.41504 7.80059C6.13317 7.74411 5.8421 7.8369 5.64492 8.04609C5.44773 8.25527 5.37229 8.55132 5.44532 8.82936L6.57441 13.1283C6.6706 13.4946 7.00169 13.75 7.3804 13.75H12.6208C12.9995 13.75 13.3306 13.4946 13.4267 13.1283L14.5558 8.82934C14.6288 8.5513 14.5534 8.25526 14.3562 8.04608C14.159 7.8369 13.868 7.74411 13.5861 7.80059Z" stroke="#FFCD19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="Rectangle" x="2.5" y="2.5" width="15" height="15" rx="5" stroke="#FFCD19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

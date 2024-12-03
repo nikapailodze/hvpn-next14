@@ -1,0 +1,29 @@
+.conatiner {
+    display: flex;
+    width: 148.213px;
+    height: 148.213px;
+    padding: 19.907px 20.012px 19.905px 19.801px;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    
+    background-color: #0D0E0F;
+    border-radius: 78.837px;
+}
+
+
+.pulse {
+    animation: pulse-animation 2s infinite;
+}
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 9px rgba(114, 60, 235, 0.50);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+}
+

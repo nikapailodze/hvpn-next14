@@ -1,0 +1,145 @@
+@import "../../../../../global/colors.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 12px;
+    // border-radius: 8px;
+}
+
+.mainContent {
+    width: 100%;
+}
+
+.title {
+    color: $primary-text-color;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.contentWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.content {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1.5px dashed $primary-Button;
+    border-radius: 8px;
+    width: 100%;
+    transition: border-radius 0.1s ease-in-out;
+}
+
+.contentBorder {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.selectedContent {
+    background-color: $primary-Button;
+}
+
+.details {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.detilsTitle {
+    color: $primary-text-color;
+    text-align: left;
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.detilsSubtext {
+    color: $secondary-gray-text-color;
+    font-family: "DM Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+
+}
+
+.dropDown {
+    border-radius: 4px;
+    background: #302F3E;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdownIcon {
+    transition: transform 0.3s ease;
+}
+
+.open {
+    transform: rotate(180deg);
+}
+
+
+
+.locationsContainer {
+    // border-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: $primary-Button;
+    padding-bottom: 16px;
+}
+
+.locationsContainer {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    // padding-bottom: 16px;
+}
+
+.locationsContainerShow {
+    height: auto;
+}
+
+.locationsContainerHide {
+    padding-bottom: 0;
+    height: 0;
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+    }
+
+    to {
+        max-height: 600px;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        max-height: 600px;
+    }
+
+    to {
+        max-height: 0;
+    }
+}

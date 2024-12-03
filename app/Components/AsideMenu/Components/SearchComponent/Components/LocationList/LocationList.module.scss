@@ -1,0 +1,23 @@
+.test {
+    width: 100%;
+    height: 200px;
+    background-color: cadetblue;
+}
+
+.content {
+    overflow-x: hidden;
+    cursor: grab;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    // background-color: brown;
+}
+
+.content:active {
+    cursor: grabbing;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

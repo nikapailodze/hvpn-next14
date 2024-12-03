@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  background-color: #131316;
+  padding: 12px 16px;
+  gap: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.containerSearch {
+  background: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  animation: none;
+}
+
+.containerSearch:focus {
+  outline: none;
+  border: none;
+}/*# sourceMappingURL=AsideSearch.module.css.map */

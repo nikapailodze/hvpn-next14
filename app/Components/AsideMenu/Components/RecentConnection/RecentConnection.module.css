@@ -1,0 +1,133 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 12px;
+}
+
+.mainContent {
+  width: 100%;
+}
+
+.title {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.content {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px dashed #723CEB;
+  border-radius: 8px;
+  width: 100%;
+  transition: border-radius 0.1s ease-in-out;
+}
+
+.contentBorder {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.selectedContent {
+  background-color: #723CEB;
+}
+
+.details {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.detilsTitle {
+  color: #FFFFFF;
+  text-align: left;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.detilsSubtext {
+  color: #9E9DA6;
+  font-family: "DM Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.dropDown {
+  border-radius: 4px;
+  background: #302F3E;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdownIcon {
+  transition: transform 0.3s ease;
+}
+
+.open {
+  transform: rotate(180deg);
+}
+
+.locationsContainer {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #723CEB;
+  padding-bottom: 16px;
+}
+
+.locationsContainer {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.locationsContainerShow {
+  height: auto;
+}
+
+.locationsContainerHide {
+  padding-bottom: 0;
+  height: 0;
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 600px;
+  }
+}
+@keyframes slideUp {
+  from {
+    max-height: 600px;
+  }
+  to {
+    max-height: 0;
+  }
+}/*# sourceMappingURL=RecentConnection.module.css.map */

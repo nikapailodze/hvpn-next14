@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  max-height: 33px;
+  height: 100%;
+}
+
+.option {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  background-image: linear-gradient(#723CEB, #723CEB);
+  background-size: 0% 1px;
+  background-position-y: 100%;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+}
+
+.option:hover,
+.option:focus,
+.option:active {
+  background-size: 100% 1px;
+}
+
+.activeTab {
+  background-image: linear-gradient(#723CEB, #723CEB);
+  background-size: 100% 1px;
+  background-position-y: 100%;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+}/*# sourceMappingURL=TabSelector.module.css.map */
