@@ -33,5 +33,7 @@ export enum IconEnum {
     DollarSymbol='Icons/dollarSymbol.svg',
 
     Globe = 'Icons/globe.svg',
+
+    BurgerIcon = 'Icons/burgerIcon.svg',
     
 }
