@@ -5,6 +5,8 @@ export enum IconEnum {
     rightArrow = 'Icons/rightArrow.svg',
     leftArrow = 'Icons/leftArrow.svg',
 
+    rightLittleArrow = 'Icons/rightLittleArrow.svg',
+
 
     Location = 'Icons/Location.svg',
 

@@ -11,6 +11,10 @@ const LanguagesComponent = () => {
                     Language
                 </p>
             </div>
+
+            <div>
+                <Image src={IconEnum.rightLittleArrow} width={24} height={24} alt='right arrow'/>
+            </div>
         </div>
     )
 }
