@@ -16,19 +16,19 @@ const Header = () => {
     };
     return (
         <header className={styles.container}>
-            <div className={styles.pro}>
-                <Image src={IconEnum.DollarSymbol} width={20} height={20} alt='Dollar Sybmbol'/>
-                <p>Pro</p>
- 
-            </div>
-
-            <Status />
 
             <div
                 onClick={onDropdownClick}
                 className={`${styles.dropDown} ${showOptions ? styles.open : ""}`}
             >
-                <Image src={IconEnum.Settings} width={24} height={24} alt='Drop Down' />
+                <Image src={IconEnum.BurgerIcon} width={24} height={24} alt='Drop Down' />
+            </div>
+            <Status />
+
+            <div className={styles.pro}>
+                <Image src={IconEnum.DollarSymbol} width={20} height={20} alt='Dollar Sybmbol'/>
+                <p>Pro</p>
+ 
             </div>
 
             <div
