@@ -19,6 +19,7 @@ export enum IconEnum {
 
     Settings = 'Icons/settings.svg',
     SettingsActive = 'Icons/settingsActive.svg',
+    SettingsBold = 'Icons/SettingsBold.svg',
 
     Wallet = 'Icons/wallet.svg',
     WalletActive = 'Icons/walletActive.svg',
@@ -35,5 +36,11 @@ export enum IconEnum {
     Globe = 'Icons/globe.svg',
 
     BurgerIcon = 'Icons/burgerIcon.svg',
-    
+
+    Earth = 'Icons/Earth.svg',
+
+    User = 'Icons/User.svg',
+
+    Home='Icons/Home.svg',
+
 }

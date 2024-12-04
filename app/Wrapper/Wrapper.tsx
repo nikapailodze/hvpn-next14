@@ -10,6 +10,7 @@ import Status from '../Components/Header/Status/Status';
 import { usePathname } from 'next/navigation';
 import RecentConnection from '../Components/RecentConnection/RecentConnection';
 import IPDisplay from '../Components/IPDisplay/IPDisplay';
+import BottomBar from '../Components/BottomBar/BottomBar';
 
 interface Props {
     children?: ReactNode;
@@ -44,6 +45,8 @@ const Wrapper = ({ children }: Props) => {
                         <RecentConnection isLocationSelected={isLocationSelected} country="USA" locations="Locations 4"
                             countryFlag="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" />
                     }
+
+                    <BottomBar/>
 
 
 

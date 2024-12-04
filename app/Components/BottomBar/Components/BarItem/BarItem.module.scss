@@ -1,0 +1,42 @@
+@import '../../../../../global/colors.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; // Align horizontally for text and image
+    gap: 8px; // Spacing between children
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: $primary-background;
+    transition: width 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+
+    p {
+        font-size: 14px;
+        color: $primary-text-color;
+        opacity: 0; // Invisible when inactive
+        visibility: hidden; // Prevent interaction
+        max-width: 0; // Collapse to prevent text shifting
+        white-space: nowrap; // Prevent wrapping
+        transition: opacity 0.3s ease, max-width 0.3s ease, visibility 0.3s ease;
+    }
+
+    img {
+        transition: transform 0.3s ease;
+    }
+}
+
+.active {
+    max-width: 133px; 
+    width: 100%;
+    border-radius: 24px;
+
+    p {
+        opacity: 1; // Make it visible
+        visibility: visible; // Allow interaction
+        max-width: 100%; // Natural width
+    }
+}
