@@ -3,6 +3,10 @@ export enum IconEnum {
     Logo = 'Logo/hvpnLogo.svg',
 
     rightArrow = 'Icons/rightArrow.svg',
+    leftArrow = 'Icons/leftArrow.svg',
+
+    rightLittleArrow = 'Icons/rightLittleArrow.svg',
+
 
     Location = 'Icons/Location.svg',
 
@@ -27,5 +31,7 @@ export enum IconEnum {
     Play= 'Icons/play.svg',
 
     DollarSymbol='Icons/dollarSymbol.svg',
+
+    Globe = 'Icons/globe.svg',
     
 }

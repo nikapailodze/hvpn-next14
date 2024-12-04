@@ -13,7 +13,7 @@ const SettingsList = () => {
                             NetShield
                         </p>
                         <div className={styles.btn}>
-                            <Image src={IconEnum.Premium} width={20} height={20} alt='premium'/>
+                            <Image src={IconEnum.Premium} width={20} height={20} alt='premium' />
                             <p className={styles.premiumTile}>Premium</p>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ const SettingsList = () => {
 
                 </div>
                 <div className={styles.advanced}>
-                    
+
                     <h3 className={styles.advancedTitle}>Advanced</h3>
 
                     <div className={styles.settingItem}>
@@ -64,10 +64,15 @@ const SettingsList = () => {
                                 <SwitchButton />
                             </div>
                         </div>
-                        <p className={styles.subtext}>
-                            In case H-VPN sites are blocked, this setting allows the app to try alternative network routing to reach H-VPN, which can be useful dor bypassing firewalls or network issues. We recommend keeping this setting on for greater reliability.
-                            Learn more.
-                        </p>
+                        <div>
+                            <p className={styles.subtext}>
+                                In case H-VPN sites are blocked, this setting allows the app to try alternative network routing to reach H-VPN, which can be useful dor bypassing firewalls or network issues. We recommend keeping this setting on for greater reliability.
+                            </p>
+                            <a className={styles.learnMore} href="">
+                                Learn more.
+                            </a>
+                        </div>
+
 
                     </div>
 
