@@ -5,7 +5,7 @@ import { useState } from 'react';
 import DropOptionList from './Components/DropOptionList/DropOptionList';
 import Status from './Status/Status';
 import LeftArrow from '../LeftArrow/LeftArrow';
-import { useRouter,usePathname } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 interface Props {
     title?: string;
@@ -24,9 +24,7 @@ const Header = ({ title, display }: Props) => {
     const onClickOverlay = () => {
         setShowOptions(!showOptions);
     };
-    const onLeftArrowClick = () => {
-        router.push('./')
-    }
+
 
     const getPageTitle = () => {
         const pathTitleMap: { [key: string]: string } = {
@@ -34,11 +32,18 @@ const Header = ({ title, display }: Props) => {
             '/Profile': 'Profile',
             '/AccountSettings': 'Settings',
             '/Countries': 'Countries',
-            '/Language':'Language',
+            '/Language': 'Language',
         };
 
         return pathTitleMap[pathName] || 'Unknown Page';
     };
+    const onLeftArrowClick = () => {
+        if (pathName === '/Language') {
+            router.replace('./AccountSettings')
+        } else {
+            router.push('./')
+        }
+    }
 
 
     return (

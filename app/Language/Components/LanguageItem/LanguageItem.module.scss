@@ -1,3 +1,4 @@
+@import '../../../../global/colors.scss';
 .LanguageItemContainer {
     width: 100%;
     display: flex;
@@ -7,6 +8,16 @@
 
 .country {
     color:  #B5B7BF;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: capitalize;
+}
+.countryActive {
+    color: $primary-text-color;
     text-align: center;
     font-family: "DM Sans";
     font-size: 14px;
