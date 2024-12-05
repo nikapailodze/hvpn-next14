@@ -15,6 +15,9 @@ const BottomBar = () => {
     const onHomeClick = ()=>{
         router.push('./')
     }
+    const onProfileClick = ()=>{
+        router.push('./Profile')
+    }
 
     return (
         <div className={styles.container}>
@@ -33,6 +36,7 @@ const BottomBar = () => {
                 text="Profile"
                 image={IconEnum.User}
                 isActive={pathname === '/Profile'}
+                onClick={onProfileClick}
             />
             <BarItem
                 text="Settings"

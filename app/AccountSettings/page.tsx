@@ -5,8 +5,8 @@ import styles from "./page.module.scss";
 import Image from "next/image";
 import SettingButton from "./Components/SettingButton/SettingButton";
 import LanguagesComponent from "./Components/LanguagesComponent/LanguagesComponent";
-import LeftArrow from "./Components/LeftArrow/LeftArrow";
 import { useRouter } from "next/navigation";
+import LeftArrow from "../Components/LeftArrow/LeftArrow";
 
 
 export default function Home() {
@@ -19,10 +19,6 @@ export default function Home() {
     return (
         <div className={styles.page}>
             <div className={styles.conatiner}>
-                <div className={styles.header}>
-                   <LeftArrow onClick={onLeftArrowClick}/>
-                    <h1 className={styles.title}>Account</h1>
-                </div>
                 <SettingsList />
 
                 <LanguagesComponent/>

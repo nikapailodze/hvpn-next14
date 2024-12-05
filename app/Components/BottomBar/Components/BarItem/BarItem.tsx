@@ -14,7 +14,9 @@ const BarItem = ({ image, text, isActive, onClick }: Props) => {
             onClick={onClick}
             className={`${styles.container} ${isActive ? styles.active : ''}`}
         >
-            <Image src={image} width={24} height={24} alt="menu item icon" />
+            <div className={styles.imageWrapper}>
+                <Image src={image} width={24} height={24} alt="menu item icon" />
+            </div>
             <p>{text}</p>
         </button>
     );

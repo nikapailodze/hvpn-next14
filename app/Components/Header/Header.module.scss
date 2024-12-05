@@ -1,10 +1,11 @@
+@import '../../../global/colors.scss';
+
 .container {
     display: flex;
     padding-left: 24px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    // background: #17181D;
     height: 72px;
     position: relative;
 }
@@ -112,10 +113,10 @@
 
 .pro {
     display: flex;
-    gap :8px;
+    gap: 8px;
     align-items: center;
     justify-content: center;
-    
+
     padding: 8px 12px;
     border-radius: 20px 0px 0px 20px;
 
@@ -127,4 +128,21 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.title {
+    color: $primary-text-color;
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
 }
