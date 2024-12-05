@@ -2,12 +2,10 @@
 //Packages
 import { ReactNode, useState } from 'react';
 import { RecoilRoot } from 'recoil';
+import { usePathname } from 'next/navigation';
 //Components
 import styles from './Wrapper.module.scss'
-import AsideMenu from '../Components/AsideMenu/AsideMenu';
 import Header from '../Components/Header/Header';
-import Status from '../Components/Header/Status/Status';
-import { usePathname } from 'next/navigation';
 import RecentConnection from '../Components/RecentConnection/RecentConnection';
 import IPDisplay from '../Components/IPDisplay/IPDisplay';
 import BottomBar from '../Components/BottomBar/BottomBar';
@@ -16,7 +14,7 @@ interface Props {
     children?: ReactNode;
 }
 
-const pathsWithoutStatus = ['/AccountSettings', '/Profile','/Language']
+const pathsWithoutStatus = ['/AccountSettings', '/Profile', '/Language', '/Countries']
 
 const Wrapper = ({ children }: Props) => {
     const pathname = usePathname();
@@ -28,13 +26,12 @@ const Wrapper = ({ children }: Props) => {
     return (
         <RecoilRoot>
             <div className={styles.container}>
-                
-                <Header display={displayPath}/>
-                
+
+                <Header display={displayPath} />
+
 
                 <div className={styles.content}>
 
-                    {/* {displayPath && <Status />} */}
                     {displayPath &&
                         <IPDisplay isLocationSelected={isLocationSelected} />
                     }
@@ -42,11 +39,13 @@ const Wrapper = ({ children }: Props) => {
                     {children}
 
                     {displayPath &&
+                    <div className={styles.recentConnectionContainer}>
                         <RecentConnection isLocationSelected={isLocationSelected} country="USA" locations="Locations 4"
-                            countryFlag="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" />
+                            countryFlag="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" />                        
+                    </div>
                     }
 
-                    <BottomBar/>
+                    <BottomBar />
 
 
 
