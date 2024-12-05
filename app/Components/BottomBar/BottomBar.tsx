@@ -41,7 +41,7 @@ const BottomBar = () => {
             <BarItem
                 text="Settings"
                 image={IconEnum.SettingsBold}
-                isActive={pathname === '/AccountSettings'}
+                isActive={pathname === '/AccountSettings' || pathname=='/Language'}
                 onClick={onSettingsClick}
             />
         </div>

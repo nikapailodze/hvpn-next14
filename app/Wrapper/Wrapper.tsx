@@ -16,7 +16,7 @@ interface Props {
     children?: ReactNode;
 }
 
-const pathsWithoutStatus = ['/AccountSettings', '/Profile']
+const pathsWithoutStatus = ['/AccountSettings', '/Profile','/Language']
 
 const Wrapper = ({ children }: Props) => {
     const pathname = usePathname();

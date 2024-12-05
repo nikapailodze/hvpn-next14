@@ -34,6 +34,7 @@ const Header = ({ title, display }: Props) => {
             '/Profile': 'Profile',
             '/AccountSettings': 'Settings',
             '/Countries': 'Countries',
+            '/Language':'Language',
         };
 
         return pathTitleMap[pathName] || 'Unknown Page';

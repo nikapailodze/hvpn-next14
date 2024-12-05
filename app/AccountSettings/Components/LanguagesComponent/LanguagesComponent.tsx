@@ -1,8 +1,16 @@
 import { IconEnum } from '@/global/Icon.enum';
 import styles from './LanguagesComponent.module.scss';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const LanguagesComponent = () => {
+
+    const router = useRouter();
+    
+    const onLanguageClick =()=>{
+        router.replace('./Language')
+    }
+
     return (
         <div className={styles.languages}>
             <div className={styles.content}>
@@ -12,7 +20,7 @@ const LanguagesComponent = () => {
                 </p>
             </div>
 
-            <div>
+            <div onClick={onLanguageClick}>
                 <Image src={IconEnum.rightLittleArrow} width={24} height={24} alt='right arrow'/>
             </div>
         </div>
