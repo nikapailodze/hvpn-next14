@@ -1,4 +1,4 @@
-@import '../../../../global/colors.scss';
+@import '../../../global/colors.scss';
 .btn {
     width: 100%;
 
@@ -23,4 +23,8 @@
 .textRed{
     color: $secondary-red-text-color;
     border-radius: 0px 0px 8px 8px;
+}
+
+.roundedBorders{
+    border-radius: 8px;
 }
