@@ -26,3 +26,14 @@
     line-height: 18px;
     text-transform: capitalize;
 }
+
+.checkBox{
+    display: none;
+}
+
+.checkBoxContainer{
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

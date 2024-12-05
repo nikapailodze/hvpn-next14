@@ -43,4 +43,6 @@ export enum IconEnum {
 
     Home='Icons/Home.svg',
 
+    Check = 'Icons/Check.svg',
+
 }

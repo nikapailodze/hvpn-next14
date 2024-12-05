@@ -1,5 +1,6 @@
+import { IconEnum } from '@/global/Icon.enum';
 import styles from './LanguageItem.module.scss';
-
+import Image from 'next/image';
 interface Props {
     country: string;
     isChecked?: boolean;
@@ -13,7 +14,12 @@ const LanguageItem = ({ country, isChecked, id, onClick }: Props) => {
             <p  className={`${styles.country} ${isChecked ? styles.countryActive : ''}`}>
                 {country}
             </p>            
-            <input type="checkbox" checked={isChecked} />
+            <label className={styles.checkBoxContainer}>
+                <input className={styles.checkBox} type="checkbox" checked={isChecked} />
+                {isChecked &&
+                <Image src={IconEnum.Check} width={20} height={20} alt='Checkbox'/>
+                }
+            </label>
         </div>
     )
 }
