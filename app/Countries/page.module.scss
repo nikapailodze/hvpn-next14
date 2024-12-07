@@ -7,15 +7,13 @@
     flex-direction: column;
     gap: 16px;
     align-items: center;
+    position: relative;
 }
 
-.recentConnectionContainer {
-    width: 100%;
-}
+
 
 .title {
     color: $primary-text-color;
-    text-align: center;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: "DM Sans";
     font-size: 16px;
@@ -26,7 +24,31 @@
 .containers{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    min-width: 100%;
+    gap: 12px;
+}
+
+.freesContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
     width: 100%;
-    justify-content: flex-start;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.showOverlay {
+    display: block;
+    position: fixed;
 }

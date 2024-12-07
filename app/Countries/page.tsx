@@ -1,11 +1,14 @@
 'use client'
 import { useRecoilState } from "recoil";
 import styles from "./page.module.scss";
-import { locationIsSelectedState } from "@/global/atoms";
+import { freesInfoState, locationIsSelectedState } from "@/global/atoms";
 import Search from "./Components/Search/Search";
 import RecentConnection from "../Components/RecentConnection/RecentConnection";
 import { useState } from "react";
 import LocationList from "./Components/LocationList/LocationList";
+import { IconEnum } from "@/global/Icon.enum";
+import Image from "next/image";
+import FreeConnectPop from "./Components/FreeConnectPop/FreeConnectPop";
 
 interface Countries {
     countryFlag: string;
@@ -17,6 +20,7 @@ interface Countries {
 
 export default function Home() {
     const [states] = useRecoilState(locationIsSelectedState)
+    const [displayPopUp, setDisplayPopUp] = useRecoilState(freesInfoState)
     const [isLocationSelected] = useState(true)
 
 
@@ -26,12 +30,6 @@ export default function Home() {
             country: 'United States',
             locations: 'North America',
             isPremium: true
-        },
-        {
-            countryFlag: 'https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Australia.svg',
-            country: 'Australia',
-            locations: 'Oceania',
-            isPremium: false
         },
         {
             countryFlag: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg', // Flag image URL
@@ -96,34 +94,52 @@ export default function Home() {
 
     ];
 
+    const onInfoClick = () => {
+        setDisplayPopUp(!displayPopUp)
+    }
+    const onClickOverlay = () => {
+        setDisplayPopUp(!displayPopUp);
+    };
+
+
     const countriesPremium: Countries[] = countriesData.filter(country => country.isPremium);
     const countriesFree: Countries[] = countriesData.filter(country => !country.isPremium);
 
-    console.log('Premium Countries:', countriesPremium);
-    console.log('Free Countries:', countriesFree);
 
 
     return (
-        <div className={styles.page}>
-            <Search />
+        <>
+            {displayPopUp && <FreeConnectPop/>}
+            <div onClick={onClickOverlay} className={`${styles.overlay} ${displayPopUp && styles.showOverlay}`}></div>
 
-            <div className={styles.recentConnectionContainer}>
-                <h3 className={styles.containers}>Recent Connection</h3>
+            <div className={styles.page}>
+                <Search />
 
-                <RecentConnection isLocationSelected={isLocationSelected} country="USA" locations="Locations 4"
-                    countryFlag="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" />
+                <div className={styles.containers}>
+                    <h3 className={styles.title}>Recent Connection</h3>
+                    <RecentConnection isLocationSelected={isLocationSelected} country="USA" locations="Locations 4"
+                        countryFlag="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" />
+                </div>
+
+                <div className={styles.containers}>
+                    <div className={styles.freesContent}>
+                        <h3 className={styles.title}>Free</h3>
+                        <div onClick={onInfoClick} className={styles.infoImageContainer}>
+                            <Image src={IconEnum.AddInfo} width={20} height={20} alt="Information" />
+                        </div>
+                    </div>
+                    <LocationList countries={countriesFree} />
+                </div>
+                <div className={styles.containers}>
+                    <h3 className={styles.title}>Premium</h3>
+                    <LocationList countries={countriesPremium} />
+                </div>
+
+
+
+
             </div>
 
-            <div className={styles.containers}>
-                <h3 className={styles.title}>Free</h3>
-                <LocationList countries={countriesFree} />
-            </div>
-            <div className={styles.containers}>
-                <h3 className={styles.title}>Premium</h3>
-                <LocationList countries={countriesPremium} />
-            </div>
-
-
-        </div>
+        </>
     );
 }
