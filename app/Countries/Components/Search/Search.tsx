@@ -1,9 +1,9 @@
 import { IconEnum } from '@/global/Icon.enum';
-import styles from './AsideSearch.module.scss'
+import styles from './Search.module.scss'
 import Image from 'next/image';
 import { useState } from 'react';
 
-const AsideSearch = () => {
+const Search = () => {
     const [inputValue, setInputValue] = useState("Search")
     const onInputChange = (e:any) => {
         setInputValue(e.target.value)
@@ -17,4 +17,4 @@ const AsideSearch = () => {
     )
 }
 
-export default AsideSearch;
+export default Search;

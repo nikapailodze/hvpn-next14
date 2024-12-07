@@ -45,4 +45,8 @@ export enum IconEnum {
 
     Check = 'Icons/Check.svg',
 
+    AddInfo = 'Icons/AddInfo.svg',
+
+    Close = 'Icons/Close.svg',
+
 }

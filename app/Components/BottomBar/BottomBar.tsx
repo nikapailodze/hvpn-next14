@@ -19,12 +19,17 @@ const BottomBar = () => {
         router.push('./Profile')
     }
 
+    const onCountiesClick = ()=>{
+        router.push('./Countries')
+    }
+
     return (
         <div className={styles.container}>
             <BarItem
                 text="Countries"
                 image={IconEnum.Earth}
                 isActive={pathname === '/Countries'}
+                onClick={onCountiesClick}
             />
             <BarItem
                 text="Home"

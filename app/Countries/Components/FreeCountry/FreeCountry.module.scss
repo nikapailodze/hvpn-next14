@@ -1,0 +1,21 @@
+@import '../../../../global/colors.scss';
+
+
+.container{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    max-width: 108px;
+    width: 100%;
+}
+
+.text {
+    color: $primary-text-color;
+    font-family: "DM Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+
+}
