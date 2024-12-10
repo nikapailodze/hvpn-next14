@@ -1,16 +1,16 @@
 const { app, BrowserWindow, Tray, Menu, nativeImage } = require('electron');
 const path = require('path');
 const next = require('next');
-const sharp = require('sharp'); // Import sharp for image conversion
+const sharp = require('sharp'); 
 
 const isDev = process.env.NODE_ENV !== 'production';
 const nextApp = next({ dev: isDev });
 
 app.commandLine.appendSwitch('disable-features', 'OutOfBlinkCors');
+app.dock.hide();
 
 let tray = null;
 let mainWindow = null;
-app.dock.hide(); // Hides the dock icon
 
 nextApp.prepare().then(() => {
   function createWindow() {

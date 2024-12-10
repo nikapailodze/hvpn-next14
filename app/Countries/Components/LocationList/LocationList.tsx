@@ -1,6 +1,5 @@
 import LocationItem from '../LocationItem/LocationItem';
 import styles from './LocationList.module.scss'
-import Image from 'next/image'
 
 interface countries {
     countryFlag: string;
