@@ -6,28 +6,6 @@
 }
 
 body {
-  background-color: black;
-  width: 100%;
-  /* background-image: url('/Background/backgroundBall.png');
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover; */
+  background-color: #0D0E0E;  
 }
 
-.imageBall {
-  position: absolute;
-  top: 0;
-  /* Aligns container to the top */
-  left: 50%;
-  transform: translateX(-50%);
-  /* Centers container horizontally */
-
-  background-image: url('/Background/backgroundBall.png');
-  background-repeat: no-repeat;
-  background-position: top center;
-  /* Aligns image to the top-center */
-  background-size: cover;
-  /* Adjust if needed */
-
-  
-}
