@@ -14,7 +14,7 @@ interface Props {
     children?: ReactNode;
 }
 
-const pathsWithoutStatus = ['/AccountSettings', '/Profile', '/Language', '/Countries']
+const pathsWithoutStatus = ['/AccountSettings', '/Profile', '/Language', '/Countries', '/Login']
 
 const Wrapper = ({ children }: Props) => {
     const pathname = usePathname();
@@ -25,7 +25,9 @@ const Wrapper = ({ children }: Props) => {
 
     return (
         <RecoilRoot>
+            <div className={styles.imageBall}></div>
             <div className={styles.container}>
+                
 
                 <Header display={displayPath} />
 

@@ -12,7 +12,7 @@ const DropOptionList = () => {
     }
 
     const onLogoutClick=()=>{
-        router.push('/')
+        router.push('/Login')
     }
 
     return (

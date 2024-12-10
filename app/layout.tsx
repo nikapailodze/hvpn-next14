@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "./globals.css";
 import Wrapper from "./Wrapper/Wrapper";
-
-
 
 // Export metadata
 export const metadata: Metadata = {
@@ -19,10 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body >
-        <Wrapper>
-          {children}
-        </Wrapper>
+      <body>
+        <Wrapper>{children}</Wrapper>
       </body>
     </html>
   );
