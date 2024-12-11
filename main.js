@@ -1,7 +1,7 @@
-const { app, BrowserWindow, Tray, Menu, nativeImage } = require('electron');
+const { app, BrowserWindow, Tray, Menu, nativeImage, screen } = require('electron');
 const path = require('path');
 const next = require('next');
-const sharp = require('sharp'); 
+const sharp = require('sharp');
 
 const isDev = process.env.NODE_ENV !== 'production';
 const nextApp = next({ dev: isDev });
@@ -21,7 +21,7 @@ nextApp.prepare().then(() => {
       title: "H-VPN",
       frame: false,
       transparent: true,
-     // alwaysOnTop: true, // not necessary
+      // alwaysOnTop: true, // not necessary
       webPreferences: {
         nodeIntegration: false,
         contextIsolation: true,
@@ -74,15 +74,24 @@ nextApp.prepare().then(() => {
         tray.setContextMenu(contextMenu);
 
         tray.on('click', () => {
-          const trayBounds = tray.getBounds();  // Get the position of the tray icon
-
-          // Position the window relative to the tray icon
-          mainWindow.setPosition(trayBounds.x, trayBounds.y + trayBounds.height); // Position window below the tray icon
-
+          const trayBounds = tray.getBounds(); // Get the tray icon bounds (position and size)
+          const windowSize = mainWindow.getBounds(); // Get the main window size
+        
+          const x = Math.round(trayBounds.x + trayBounds.width / 2 - windowSize.width / 2);
+        
+          const y = Math.round(trayBounds.y + trayBounds.height); 
+        
+          mainWindow.setBounds({
+            x: x,
+            y: y,
+            width: windowSize.width,
+            height: windowSize.height,
+          });
+        
           if (mainWindow.isVisible()) {
-            mainWindow.hide(); // Hide the window if it's already visible
+            mainWindow.hide();
           } else {
-            mainWindow.show(); // Show the window if it's not visible
+            mainWindow.show();
           }
         });
       })
