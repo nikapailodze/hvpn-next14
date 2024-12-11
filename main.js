@@ -15,18 +15,21 @@ let mainWindow = null;
 nextApp.prepare().then(() => {
   function createWindow() {
     mainWindow = new BrowserWindow({
+      // backgroundColor: '#5F9EA0' , -- before page loads 
       width: 463,
       height: 812,
       title: "H-VPN",
       frame: false,
       transparent: true,
-      alwaysOnTop: true,
+     // alwaysOnTop: true, // not necessary
       webPreferences: {
         nodeIntegration: false,
         contextIsolation: true,
         preload: path.join(__dirname, 'preload.js'),
       },
       show: false,
+      movable: false,
+      resizable: false,
     });
 
     const startUrl = isDev
