@@ -1,29 +1,40 @@
-.conatiner {
-    display: flex;
-    width: 94.155px;
-    height: 94.155px;
-    padding: 12.646px 12.712px 12.645px 12.58px;
-    justify-content: center;
-    align-items: center;
-    
-    
-    
-    
-    background-color: #0D0E0F;
-    border-radius: 50px;
+.main_container {
+  width: 116px;
+  height: 116px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: solid 5px rgba(114, 60, 235, 0.20);
+  border-radius: 50%;
+  animation: buttonAnimation 1s linear 1.2s infinite alternate;
+}
+
+.decor {
+  border-radius: 100px;
+  border: solid 6px rgba(114, 60, 235, 0.5);
+  animation: buttonAnimation 1s linear 1s infinite alternate;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
 }
 
 
-.pulse {
-    animation: pulse-animation 1.5s infinite;
-}
-@keyframes pulse-animation {
-    0% {
-        box-shadow: 0 0 0 9px rgba(114, 60, 235, 0.50);
-    }
 
-    100% {
-        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
-    }
+.button_container {
+  border-radius: 52.604px;
+  border: solid 5px #723ceb;
+  width: 94px;
+  height: 94px;
+  background-color: #0d0e0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+//   animation: buttonAnimationInner 1s linear 1s infinite alternate-reverse;
 }
 
+@keyframes buttonAnimation {
+  to {
+    border-color: #0000;
+  }
+}
