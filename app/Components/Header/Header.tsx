@@ -31,6 +31,7 @@ const Header = ({ display }: Props) => {
       "/AccountSettings": "Settings",
       "/Countries": "Countries",
       "/Language": "Language",
+      "/Login": "Login",
     };
 
     return pathTitleMap[pathName] || "Unknown Page";
@@ -45,53 +46,37 @@ const Header = ({ display }: Props) => {
 
   return (
     <header className={styles.container}>
-      {display ? (
-        <>
-          <div
-            onClick={onDropdownClick}
-            className={`${styles.dropDown} ${showOptions ? styles.open : ""}`}
-          >
-            <Image
-              src={IconEnum.BurgerIcon}
-              width={24}
-              height={24}
-              alt="Drop Down"
-            />
-          </div>
+      { (getPageTitle() == "Countries" || getPageTitle() == "Home") && (<div
+        onClick={onDropdownClick}
+        className={`${styles.dropDown} ${showOptions ? styles.open : ""}`}
+      >
+        <Image
+          src={IconEnum.BurgerIcon}
+          width={24}
+          height={24}
+          alt="Drop Down"
+        />
+      </div>)}
 
-          <Status />
-        </>
+      {getPageTitle()=='Language' && <LeftArrow onClick={onLeftArrowClick} />}
+
+      {getPageTitle() == "Home" ? (
+        <Status />
       ) : (
-        <>
-          <LeftArrow onClick={onLeftArrowClick} />
-          <h1 className={styles.title}>{getPageTitle()}</h1>
-        </>
+        <h1 className={styles.title}>{getPageTitle()}</h1>
       )}
 
-      <div className={styles.pro}>
-        <Image
-          src={IconEnum.DollarSymbol}
-          width={20}
-          height={20}
-          alt="Dollar Sybmbol"
-        />
-        <p>Pro</p>
-      </div>
-
-      <div
-        className={`${styles.locationsContainer} 
-            ${
-              showOptions
-                ? styles.locationsContainerShow
-                : styles.locationsContainerHide
-            }`}
-      >
-        <DropOptionList />
-      </div>
-      <div
-        onClick={onClickOverlay}
-        className={`${styles.overlay} ${showOptions && styles.showOverlay}`}
-      ></div>
+      {(getPageTitle() == "Countries" || getPageTitle() == "Home") && (
+        <div className={styles.pro}>
+          <Image
+            src={IconEnum.DollarSymbol}
+            width={20}
+            height={20}
+            alt="Dollar Sybmbol"
+          />
+          <p>Pro</p>
+        </div>
+      )}
     </header>
   );
 };

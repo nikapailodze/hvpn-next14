@@ -4,10 +4,6 @@ import Image from "next/image";
 
 const StartButton = () => {
   return (
-    // <div className={`${styles.conatiner} ${styles.circle} ${styles.pulse}`}>
-    //     <Image src={IconEnum.Play} width={108.401} height={108.401} alt='play'/>
-
-    // </div>
     <div className={styles.main_container}>
       <div className={styles.decor}>
           <div className={styles.button_container}>
