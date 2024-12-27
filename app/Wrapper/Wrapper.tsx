@@ -14,7 +14,8 @@ interface Props {
     children?: ReactNode;
 }
 
-const pathsWithoutStatus = ['/AccountSettings', '/Profile', '/Language', '/Countries', '/Login']
+const pathsWithoutStatus = ['/AccountSettings', '/Profile', '/Language', '/Countries', '/Login', '/Register']
+const pathWithoutBottomBar = ['/Login', '/Register']
 
 const Wrapper = ({ children }: Props) => {
     const pathname = usePathname();
@@ -23,13 +24,15 @@ const Wrapper = ({ children }: Props) => {
 
     const displayPath = !pathsWithoutStatus.includes(pathname)
 
+    const displayBottomBar = !pathWithoutBottomBar.includes(pathname)
+
     return (
         <RecoilRoot>
             <div className={styles.imageBall}></div>
             <div className={styles.container}>
                 
 
-                <Header display={displayPath} />
+                <Header/>
 
 
                 <div className={styles.content}>
@@ -47,7 +50,7 @@ const Wrapper = ({ children }: Props) => {
                     </div>
                     }
 
-                    <BottomBar />
+                    {displayBottomBar && <BottomBar />}
 
 
 

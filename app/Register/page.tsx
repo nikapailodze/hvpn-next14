@@ -11,6 +11,7 @@ import InputItem from "../Components/InputItem/InputItem";
 type Inputs = {
   Email: string;
   Password: string;
+  Retypepassword: string;
 };
 
 export default function Home() {
@@ -27,7 +28,7 @@ export default function Home() {
           <h1 className={styles.title}>Welcome to H-vpn</h1>
         </div>
         <p className={styles.subText}>
-          Please enter your credentials to sign in
+          Please enter your credentials to sign up
         </p>
       </div>
       <form
@@ -44,6 +45,10 @@ export default function Home() {
             <InputItem
               label="Password"
               register={register("Password", { required: true })}
+            />
+            <InputItem
+              label="Retype password"
+              register={register("Retypepassword", { required: true })}
             />
           </div>
 
@@ -94,11 +99,11 @@ export default function Home() {
         <div className={styles.signupWrapper}>
           <div className={styles.signUP}>
             <p className={styles.signUpsubText}>
-              Don’t you have an account yet?{" "}
+              Don’t you have an account yet?
             </p>
 
-            <a className={styles.createAccontAncor} href="./Register">
-              Create an account{" "}
+            <a className={styles.createAccontAncor} href="./Login">
+              Sign in here
             </a>
           </div>
           <Image

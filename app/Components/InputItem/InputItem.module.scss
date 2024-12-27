@@ -1,0 +1,32 @@
+@import "../../../global/colors.scss";
+.inputItem {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--Additional-stroke, #1f212d);
+  background-color: transparent;
+
+  color: $primary-text-color;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+.inputItemContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.subText {
+  color: $secondary-gray-text-color;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.inputItem:focus {
+  outline: none; 
+  border: 1px solid $primary-Button;
+}

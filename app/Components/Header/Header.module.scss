@@ -2,7 +2,6 @@
 
 .container {
   display: flex;
-  padding-left: 24px;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -43,9 +42,10 @@
   border-radius: 8px;
 }
 
-.open {
-  transform: rotate(180deg);
+.dropDownContainer{
+    padding-left: 24px;
 }
+
 
 .locationsContainer {
   overflow: hidden;
@@ -132,6 +132,11 @@
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+}
+.titleWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .header {
