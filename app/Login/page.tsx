@@ -48,7 +48,7 @@ export default function Home() {
           </div>
 
           <div className={styles.forgot}>
-            <a className={styles.forgetAncor} href="">
+            <a className={styles.forgetAncor} href="./ResetPassword">
               Forget password?
             </a>
           </div>
@@ -92,15 +92,13 @@ export default function Home() {
         </div>
 
         <div className={styles.signupWrapper}>
-          <div className={styles.signUP}>
+          
             <p className={styles.signUpsubText}>
               Don’t you have an account yet?{" "}
-            </p>
-
             <a className={styles.createAccontAncor} href="./Register">
               Create an account{" "}
             </a>
-          </div>
+            </p>
           <Image
             src={IconEnum.rightArrowPurple}
             width={20}

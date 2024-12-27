@@ -7,6 +7,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import Button from "../Components/Button/Button";
 import { IconEnum } from "@/global/Icon.enum";
 import InputItem from "../Components/InputItem/InputItem";
+import PasswordStrength from "./Components/PasswordStreng/PasswordStreng";
 
 type Inputs = {
   Email: string;
@@ -51,11 +52,13 @@ export default function Home() {
               register={register("Retypepassword", { required: true })}
             />
           </div>
-
-          <div className={styles.forgot}>
-            <a className={styles.forgetAncor} href="">
-              Forget password?
-            </a>
+          <div className={styles.passwordStrength}>
+            <PasswordStrength />
+            <p className={styles.policyGray}>
+              By signing up, you agree with our{" "}
+              <span className={styles.policyPurple}>Terms of service</span> and{" "}
+              <span className={styles.policyPurple}>privacy policy.</span>{" "}
+            </p>
           </div>
         </div>
 
