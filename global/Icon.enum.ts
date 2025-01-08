@@ -53,4 +53,6 @@ export enum IconEnum {
 
     Close = 'Icons/Close.svg',
 
+    Inbox = 'Icons/inbox.svg',
+
 }
