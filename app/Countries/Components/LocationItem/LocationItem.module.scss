@@ -106,3 +106,54 @@
 //         background-position: 0% 50%;
 //     }
 // }
+
+.locationsContainer {
+    // border-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: $secondary-background-color;
+    padding-bottom: 16px;
+}
+
+.locationsContainer {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    // padding-bottom: 16px;
+}
+
+.locationsContainerShow {
+    height: auto;
+}
+
+.locationsContainerHide {
+    padding-bottom: 0;
+    height: 0;
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+    }
+
+    to {
+        max-height: 600px;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        max-height: 600px;
+    }
+
+    to {
+        max-height: 0;
+    }
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
