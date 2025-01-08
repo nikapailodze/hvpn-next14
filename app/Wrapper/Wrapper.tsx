@@ -21,9 +21,9 @@ const pathsWithoutStatus = [
   "/Countries",
   "/Login",
   "/Register",
-  "/ResetPassword"
+  "/ResetPassword",
 ];
-const pathWithoutBottomBar = ["/Login", "/Register","/ResetPassword"];
+const pathWithoutBottomBar = ["/Login", "/Register", "/ResetPassword"];
 
 const Wrapper = ({ children }: Props) => {
   const pathname = usePathname();
@@ -56,7 +56,12 @@ const Wrapper = ({ children }: Props) => {
             </div>
           )}
 
-          {displayBottomBar && <BottomBar />}
+          {displayBottomBar && (
+            <div className={styles.bottomBarWrapper}>
+              <BottomBar />
+              <div className={styles.bottombarCover}></div>
+            </div>
+          )}
         </div>
       </div>
     </RecoilRoot>
