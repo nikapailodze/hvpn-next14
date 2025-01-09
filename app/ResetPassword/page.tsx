@@ -7,6 +7,7 @@ import { IconEnum } from "@/global/Icon.enum";
 // import { SubmitHandler, useForm } from "react-hook-form";
 import InboxItem from "./Components/InboxItem/InboxItem";
 import SendEmail from "./Components/SendEmail/SendEmail";
+import Reset from "./Components/Reset/Reset";
 
 
 export default function Home() {
@@ -15,8 +16,8 @@ export default function Home() {
   // const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
   return (
     <div className={styles.page}>
-      
-      <SendEmail/>
+      <Reset/>
+      {/* <SendEmail/>
       <InboxItem/>
 
       <div className={styles.signupWrapper}>
@@ -29,7 +30,7 @@ export default function Home() {
         <a className={styles.createAccontAncor} href="./Login">
           Back to log in
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }
