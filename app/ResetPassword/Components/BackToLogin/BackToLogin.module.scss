@@ -1,0 +1,17 @@
+@import '../../../../global/colors.scss';
+.signupWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+.createAccontAncor {
+  text-decoration: none;
+  color: $primary-Button;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}

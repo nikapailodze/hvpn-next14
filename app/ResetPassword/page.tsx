@@ -8,6 +8,7 @@ import { IconEnum } from "@/global/Icon.enum";
 import InboxItem from "./Components/InboxItem/InboxItem";
 import SendEmail from "./Components/SendEmail/SendEmail";
 import Reset from "./Components/Reset/Reset";
+import BackToLogin from "./Components/BackToLogin/BackToLogin";
 
 
 export default function Home() {
@@ -16,21 +17,11 @@ export default function Home() {
   // const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
   return (
     <div className={styles.page}>
-      <Reset/>
+      {/* <Reset/> */}
       {/* <SendEmail/>
-      <InboxItem/>
+      <InboxItem/> */}
 
-      <div className={styles.signupWrapper}>
-        <Image
-          src={IconEnum.leftArrowPurple}
-          width={20}
-          height={20}
-          alt="sign up"
-        />
-        <a className={styles.createAccontAncor} href="./Login">
-          Back to log in
-        </a>
-      </div> */}
+     {/* <BackToLogin/> */}
     </div>
   );
 }
