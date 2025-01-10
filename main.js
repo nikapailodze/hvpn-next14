@@ -7,7 +7,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 const nextApp = next({ dev: isDev });
 
 app.commandLine.appendSwitch('disable-features', 'OutOfBlinkCors');
-app.dock.hide();
+// app.dock.hide();
 
 let tray = null;
 let mainWindow = null;
@@ -33,7 +33,7 @@ nextApp.prepare().then(() => {
     });
 
     const startUrl = isDev
-      ? 'http://localhost:3000'
+      ? 'http://localhost:3001'
       : `file://${path.join(__dirname, '../out/index.html')}`;
 
     mainWindow.loadURL(startUrl);
@@ -52,7 +52,7 @@ nextApp.prepare().then(() => {
       .then((data) => {
         const trayIcon = nativeImage.createFromBuffer(data); // Create tray icon from PNG buffer
         tray = new Tray(trayIcon);
-
+  
         const contextMenu = Menu.buildFromTemplate([
           {
             label: 'Show Widget',
@@ -69,25 +69,40 @@ nextApp.prepare().then(() => {
             },
           },
         ]);
-
+  
         tray.setToolTip('H-VPN Widget');
         tray.setContextMenu(contextMenu);
-
+  
         tray.on('click', () => {
           const trayBounds = tray.getBounds(); // Get the tray icon bounds (position and size)
+          const display = screen.getPrimaryDisplay();
+          const { width: screenWidth, height: screenHeight } = display.workAreaSize;
+  
           const windowSize = mainWindow.getBounds(); // Get the main window size
-        
-          const x = Math.round(trayBounds.x + trayBounds.width / 2 - windowSize.width / 2);
-        
-          const y = Math.round(trayBounds.y + trayBounds.height); 
-        
+  
+          let x, y;
+  
+          if (process.platform === 'darwin') {
+            // mac
+            x = Math.round(trayBounds.x + trayBounds.width / 2 - windowSize.width / 2);
+            y = Math.round(trayBounds.y + trayBounds.height);
+          } else if (process.platform === 'win32') {
+            // Windows
+            x = Math.round(trayBounds.x + trayBounds.width / 2 - windowSize.width / 2);
+            y = Math.round(screenHeight - trayBounds.height - windowSize.height);
+          } else {
+            //other 
+            x = Math.round(trayBounds.x + trayBounds.width / 2 - windowSize.width / 2);
+            y = Math.round(trayBounds.y + trayBounds.height);
+          }
+  
           mainWindow.setBounds({
             x: x,
             y: y,
             width: windowSize.width,
             height: windowSize.height,
           });
-        
+  
           if (mainWindow.isVisible()) {
             mainWindow.hide();
           } else {
@@ -99,6 +114,7 @@ nextApp.prepare().then(() => {
         console.error('Error converting SVG to PNG:', err);
       });
   }
+  
 
   app.whenReady().then(() => {
     createWindow();
