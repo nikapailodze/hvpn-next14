@@ -9,6 +9,8 @@ import InboxItem from "./Components/InboxItem/InboxItem";
 import SendEmail from "./Components/SendEmail/SendEmail";
 import Reset from "./Components/Reset/Reset";
 import BackToLogin from "./Components/BackToLogin/BackToLogin";
+import ChoosePassword from "./Components/ChoosePassword/ChoosePassword";
+import Success from "./Components/Success/Success";
 
 
 export default function Home() {
@@ -18,10 +20,13 @@ export default function Home() {
   return (
     <div className={styles.page}>
       {/* <Reset/> */}
-      {/* <SendEmail/>
-      <InboxItem/> */}
+      <SendEmail/>
+      <InboxItem/>
 
      {/* <BackToLogin/> */}
+     {/* <ChoosePassword/> */}
+     {/* <Success/> */}
+
     </div>
   );
 }

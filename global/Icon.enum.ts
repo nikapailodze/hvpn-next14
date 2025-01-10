@@ -1,58 +1,57 @@
-
 export enum IconEnum {
-    Logo = 'Logo/hvpnLogo.svg',
+  Logo = "Logo/hvpnLogo.svg",
 
-    rightArrow = 'Icons/rightArrow.svg',
-    rightArrowPurple = 'Icons/rightArrowPurple.svg',
-    rightLittleArrow = 'Icons/rightLittleArrow.svg',
+  rightArrow = "Icons/rightArrow.svg",
+  rightArrowPurple = "Icons/rightArrowPurple.svg",
+  rightLittleArrow = "Icons/rightLittleArrow.svg",
 
+  leftArrow = "Icons/leftArrow.svg",
+  leftArrowPurple = "Icons/leftArrowPurple.svg",
 
-    leftArrow = 'Icons/leftArrow.svg',
-    leftArrowPurple = 'Icons/leftArrowPurple.svg',
+  Location = "Icons/Location.svg",
 
+  Search = "Icons/Search.svg",
 
+  DropDown = "Icons/dropDown.svg",
 
-    Location = 'Icons/Location.svg',
+  Currency = "Icons/currency.svg",
+  CurrencyActive = "Icons/currencyActive.svg",
 
-    Search = 'Icons/Search.svg',
+  Settings = "Icons/settings.svg",
+  SettingsActive = "Icons/settingsActive.svg",
+  SettingsBold = "Icons/SettingsBold.svg",
 
-    DropDown = 'Icons/dropDown.svg',
+  Wallet = "Icons/wallet.svg",
+  WalletActive = "Icons/walletActive.svg",
 
-    Currency = 'Icons/currency.svg',
-    CurrencyActive = 'Icons/currencyActive.svg', 
+  logout = "Icons/Logout.svg",
+  logoutActive = "Icons/LogoutActive.svg",
 
-    Settings = 'Icons/settings.svg',
-    SettingsActive = 'Icons/settingsActive.svg',
-    SettingsBold = 'Icons/SettingsBold.svg',
+  Premium = "Icons/premiumIocn.svg",
 
-    Wallet = 'Icons/wallet.svg',
-    WalletActive = 'Icons/walletActive.svg',
+  Play = "Icons/play.svg",
 
-    logout = 'Icons/Logout.svg',
-    logoutActive = 'Icons/LogoutActive.svg',
+  DollarSymbol = "Icons/dollarSymbol.svg",
 
-    Premium = 'Icons/premiumIocn.svg',
+  Globe = "Icons/globe.svg",
 
-    Play= 'Icons/play.svg',
+  BurgerIcon = "Icons/burgerIcon.svg",
 
-    DollarSymbol='Icons/dollarSymbol.svg',
+  Earth = "Icons/Earth.svg",
 
-    Globe = 'Icons/globe.svg',
+  User = "Icons/User.svg",
 
-    BurgerIcon = 'Icons/burgerIcon.svg',
+  Home = "Icons/Home.svg",
 
-    Earth = 'Icons/Earth.svg',
+  Check = "Icons/Check.svg",
 
-    User = 'Icons/User.svg',
+  AddInfo = "Icons/AddInfo.svg",
 
-    Home='Icons/Home.svg',
+  Close = "Icons/Close.svg",
 
-    Check = 'Icons/Check.svg',
+  Inbox = "Icons/inbox.svg",
 
-    AddInfo = 'Icons/AddInfo.svg',
-
-    Close = 'Icons/Close.svg',
-
-    Inbox = 'Icons/inbox.svg',
-
+  Warning = "Icons/warning.svg",
+  
+  Success = "/Icons/Success.svg",
 }
