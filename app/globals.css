@@ -12,3 +12,37 @@ body {
   border-radius: 16px; 
 }
 
+
+/* Root layout container styles */
+.layout-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  overflow: hidden;
+  border: 2px solid blue; /* TEMPORARY for debugging */
+}
+
+/* Triangle element styles */
+.triangle1 {
+  position: absolute;
+  top: -10px; /* Adjust based on your layout */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid black; /* Triangle color */
+  z-index: 10;
+  background: red; /* TEMPORARY for debugging */
+}
+.triangle{
+  width: 100%;
+  height: 20px;
+  background-color: cadetblue;
+}
+
