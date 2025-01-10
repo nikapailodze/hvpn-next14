@@ -36,7 +36,7 @@ const Wrapper = ({ children }: Props) => {
 
   return (
     <RecoilRoot>
-      <div className={styles.imageBall}></div>
+      {/* <div className={styles.imageBall}></div> */}
       <div className={styles.container}>
         {displayBottomBar && <Header />}
 

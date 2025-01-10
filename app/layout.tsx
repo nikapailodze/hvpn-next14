@@ -20,7 +20,9 @@ export default function RootLayout({
         {/* Main container for the triangle and content */}
         <div className="layout-container">
           {/* Triangle element */}
-          <div className="triangle"></div>
+          <div className="trianglewrapper">
+            <div className="triangle"></div>
+          </div>
 
           {/* Wrapper for children */}
           <Wrapper>{children}</Wrapper>

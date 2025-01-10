@@ -7,7 +7,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 const nextApp = next({ dev: isDev });
 
 app.commandLine.appendSwitch('disable-features', 'OutOfBlinkCors');
-// app.dock.hide();
+app.dock.hide();
 
 let tray = null;
 let mainWindow = null;
@@ -17,7 +17,8 @@ nextApp.prepare().then(() => {
     mainWindow = new BrowserWindow({
       // backgroundColor: '#5F9EA0' , -- before page loads 
       width: 463,
-      height: 812,
+      height: 832,
+      // 832
       title: "H-VPN",
       frame: false,
       transparent: true,
@@ -33,7 +34,7 @@ nextApp.prepare().then(() => {
     });
 
     const startUrl = isDev
-      ? 'http://localhost:3001'
+      ? 'http://localhost:3000'
       : `file://${path.join(__dirname, '../out/index.html')}`;
 
     mainWindow.loadURL(startUrl);
