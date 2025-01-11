@@ -18,7 +18,6 @@ nextApp.prepare().then(() => {
       // backgroundColor: '#5F9EA0' , -- before page loads 
       width: 463,
       height: 832,
-      // 832
       title: "H-VPN",
       frame: false,
       transparent: true,
