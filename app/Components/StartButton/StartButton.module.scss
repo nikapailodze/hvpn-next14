@@ -7,19 +7,23 @@
   position: relative;
   border: solid 5px rgba(114, 60, 235, 0.20);
   border-radius: 50%;
+}
+
+.main_container_animated {
   animation: buttonAnimation 1s linear 1.2s infinite alternate;
 }
 
 .decor {
   border-radius: 100px;
   border: solid 6px rgba(114, 60, 235, 0.5);
-  animation: buttonAnimation 1s linear 1s infinite alternate;
   position: absolute;
   width: fit-content;
   height: fit-content;
 }
 
-
+.decor_animated {
+  animation: buttonAnimation 1s linear 1s infinite alternate;
+}
 
 .button_container {
   border-radius: 52.604px;
@@ -30,7 +34,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-//   animation: buttonAnimationInner 1s linear 1s infinite alternate-reverse;
 }
 
 @keyframes buttonAnimation {
