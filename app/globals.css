@@ -6,9 +6,38 @@
 }
 
 body {
-  background-color: #0D0E0E; 
+  /* background-color: #0D0E0E;  */
 
   /* border radius not working */
-  border-radius: 16px; 
+  border-radius: 16px;
+  overflow: hidden;
 }
 
+
+/* Root layout container styles */
+.layout-container {
+  position: relative;
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start; 
+  overflow: hidden;
+}
+
+/* Triangle element styles */
+.trianglewrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #0D0E0E;
+
+}
