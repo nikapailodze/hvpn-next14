@@ -33,7 +33,7 @@ nextApp.prepare().then(() => {
     });
 
     const startUrl = isDev
-      ? 'http://localhost:3001'
+      ? 'http://localhost:3000'
       : `file://${path.join(__dirname, '../out/index.html')}`;
 
     mainWindow.loadURL(startUrl);
